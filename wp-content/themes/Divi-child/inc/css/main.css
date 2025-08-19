@@ -534,4 +534,10 @@ img.mfp-img {
   -webkit-font-smoothing: antialiased;
 }
 
+.mfp-arrow {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 /*# sourceMappingURL=main.css.map */
