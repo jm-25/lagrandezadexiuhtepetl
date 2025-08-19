@@ -447,12 +447,16 @@ img.mfp-img {
     padding: 10px;
   }
 }
+.project-item a:hover img {
+  transform: scale(1.05);
+}
 .project-item a img {
   display: block;
   width: 100%;
   height: 100%;
   margin-bottom: 20px;
   object-fit: contain;
+  transition: transform 0.3s ease-in-out;
 }
 .project-item h2 {
   font-size: 18px;
@@ -461,10 +465,9 @@ img.mfp-img {
   font-weight: bold;
 }
 
-@media (max-width: 980px) {
+@media (max-width: 767px) {
   .projects-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0px;
   }
 }
 .mfp-content .item-popup {
@@ -491,6 +494,10 @@ img.mfp-img {
   position: absolute;
   top: 20px;
   right: 20px;
+  opacity: 0.8;
+}
+.mfp-content .item-popup .popup-modal-dismiss:hover {
+  opacity: 1;
 }
 .mfp-content .item-popup .mfp-close {
   display: none;
