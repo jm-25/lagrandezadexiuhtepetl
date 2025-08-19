@@ -487,6 +487,7 @@ img.mfp-img {
   background: #333;
   color: #fff;
   padding: 20px 50px;
+  text-align: justify;
 }
 .mfp-content .item-popup .popup-modal-dismiss {
   width: 50px;
