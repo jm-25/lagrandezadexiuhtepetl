@@ -442,6 +442,11 @@ img.mfp-img {
   display: block;
   padding: 20px;
 }
+@media (max-width: 980px) {
+  .project-item a {
+    padding: 10px;
+  }
+}
 .project-item a img {
   display: block;
   width: 100%;
@@ -513,6 +518,17 @@ img.mfp-img {
 
 .mfp-arrow-left::before {
   transform: rotate(180deg);
+}
+@media (max-width: 767px) {
+  .mfp-arrow-left::before {
+    margin-left: -9px;
+  }
+}
+
+@media (max-width: 767px) {
+  .mfp-arrow-right::before {
+    margin-right: -9px;
+  }
 }
 
 .mfp-arrow-left, .mfp-arrow-right {
