@@ -432,15 +432,29 @@ img.mfp-img {
 }
 
 .projects-grid {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex; /* fallback for older browsers */
+  flex-wrap: wrap;
   display: grid;
+  display: -ms-grid; /* IE 10 */
   grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: 1fr [3]; /* IE 10 */
   gap: 20px;
+  justify-content: center;
 }
 
+.project-item {
+  flex: 1 0 calc(33.33% - 10px); /* fallback for older browsers */
+}
 .project-item a {
-  aspect-ratio: 1/1;
   display: block;
-  padding: 20px;
+  position: relative;
+  width: 100%;
+}
+.project-item a:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
 }
 @media (max-width: 980px) {
   .project-item a {
@@ -451,18 +465,21 @@ img.mfp-img {
   transform: scale(1.05);
 }
 .project-item a img {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  margin-bottom: 20px;
   object-fit: contain;
   transition: transform 0.3s ease-in-out;
 }
 .project-item h2 {
   font-size: 18px;
   margin-bottom: 20px;
+  margin-top: 20px;
   text-align: center;
   font-weight: bold;
+  color: #CCC4C5;
 }
 
 @media (max-width: 767px) {
@@ -488,6 +505,12 @@ img.mfp-img {
   color: #fff;
   padding: 20px 50px;
   text-align: justify;
+}
+.mfp-content .item-popup .popup-content h2 {
+  color: #CCC4C5;
+  text-align: center;
+  font-weight: bold;
+  font-size: 22px;
 }
 .mfp-content .item-popup .popup-modal-dismiss {
   width: 50px;
