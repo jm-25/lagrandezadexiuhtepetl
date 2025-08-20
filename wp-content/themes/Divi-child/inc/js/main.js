@@ -9,26 +9,26 @@ $(function () {
 		overflowY: 'scroll', // or 'auto'
 		gallery: {
 			enabled: true
-		  }	  
+		  },
+		callbacks: {
+			change: function() {
+				this.content.scrollTop(0);
+			}
+		}		  	  
 	});
-	$(document).on('click', '.popup-modal-dismiss', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
+
+	$('.open-icon-popup').magnificPopup({
+		type: 'inline'
+			  	  
 	});
+	
+	// $(document).on('click', '.popup-modal-dismiss', function (e) {
+	// 	e.preventDefault();
+	// 	$.magnificPopup.close();
+	// });
 });
 
 
 
 
 
-$('.popup-link').magnificPopup({
-  // ... other options ...
-  gallery: {
-	// ... other gallery options ...
-  },
-  callbacks: {
-	change: function() {
-	  this.content.scrollTop(0);
-	}
-  }
-});

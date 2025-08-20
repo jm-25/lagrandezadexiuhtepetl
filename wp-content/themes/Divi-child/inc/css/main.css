@@ -523,8 +523,12 @@ img.mfp-img {
 .mfp-content .item-popup .popup-modal-dismiss:hover {
   opacity: 1;
 }
-.mfp-content .item-popup .mfp-close {
-  display: none;
+
+.mfp-close {
+  width: 44px;
+  height: 44px;
+  color: #FFF !important;
+  background-color: black !important;
 }
 
 .mfp-arrow-left, .mfp-arrow-right {
