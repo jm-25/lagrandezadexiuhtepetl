@@ -506,6 +506,13 @@ img.mfp-img {
   padding: 20px 50px;
   text-align: justify;
 }
+.mfp-content .item-popup .popup-content:first-of-type .et_pb_section {
+  padding-top: 0px !important;
+  background-color: transparent !important;
+}
+.mfp-content .item-popup .popup-content:first-of-type .et_pb_section > .et_pb_row {
+  background-color: transparent !important;
+}
 .mfp-content .item-popup .popup-content h2 {
   color: #CCC4C5;
   text-align: center;
