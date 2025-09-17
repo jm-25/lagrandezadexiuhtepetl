@@ -497,6 +497,8 @@ img.mfp-img {
   margin: auto;
 }
 .mfp-content .item-popup img {
+  width: auto;
+  max-height: calc(100vh - 140px);
   max-width: calc(100% - 40px);
 }
 .mfp-content .item-popup .popup-content {
@@ -512,6 +514,10 @@ img.mfp-img {
 }
 .mfp-content .item-popup .popup-content:first-of-type .et_pb_section > .et_pb_row {
   background-color: transparent !important;
+  width: 100%;
+}
+.mfp-content .item-popup .popup-content:first-of-type .et_pb_section > .et_pb_row .et_pb_text_inner {
+  text-align: justify;
 }
 .mfp-content .item-popup .popup-content h2 {
   color: #CCC4C5;
