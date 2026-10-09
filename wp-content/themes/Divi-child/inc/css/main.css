@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Magnific Popup CSS */
 .mfp-bg {
   top: 0;
@@ -602,6 +603,303 @@ img.mfp-img {
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.ixtapa-caption {
+  color: #333;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.et_pb_video_box video {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.ixtapa-slider.et_pb_gallery_fullwidth {
+  display: flex;
+  flex-direction: column;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et_pb_gallery_items {
+  order: 0;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-controllers {
+  order: 1;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .ixtapa-slide-caption {
+  order: 2;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-slider-arrows a {
+  top: calc(var(--ixtapa-img-h, 50%) / 2);
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff !important;
+  font-size: 44px;
+  line-height: 44px;
+  text-align: center;
+  opacity: 1;
+  transition: background 0.2s;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-slider-arrows a:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-arrow-prev {
+  left: 16px;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-arrow-next {
+  right: 16px;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-controllers {
+  position: static;
+  margin-top: 14px;
+  height: auto;
+  line-height: 1;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-controllers a {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #8a8a8a;
+  opacity: 1;
+}
+.ixtapa-slider.et_pb_gallery_fullwidth .et-pb-controllers .et-pb-active-control {
+  background: #fff;
+  box-shadow: 0 0 0 2px #333;
+}
+
+.et_pb_section.hero-cover {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+}
+.et_pb_section.hero-cover .et_pb_row:first-child {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.et_pb_section.hero-cover .et_pb_row:first-child .et_pb_column,
+.et_pb_section.hero-cover .et_pb_row:first-child .et_pb_image,
+.et_pb_section.hero-cover .et_pb_row:first-child .et_pb_image_wrap {
+  width: 100%;
+  height: 100%;
+}
+.et_pb_section.hero-cover .et_pb_row:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--hero-focus, 50% 50%);
+}
+.et_pb_section.hero-cover .et_pb_row:last-child {
+  flex: 0 0 auto;
+}
+
+.et_pb_section.hero-icon::after {
+  content: var(--hero-icon, url(/wp-content/uploads/2025/08/cajete-con-punzon-puntillismo-libro-dax-1.webp));
+  display: block;
+  position: relative;
+  z-index: 10;
+  margin-top: 50px;
+  margin-bottom: -90px;
+  text-align: center;
+}
+
+.et_pb_menu.flyout-menu .et_pb_menu__menu,
+.et_pb_menu.flyout-menu .et_mobile_nav_menu {
+  display: none !important;
+}
+
+.flyout-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+  margin-left: 15px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.flyout-toggle .flyout-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+}
+.flyout-toggle .flyout-icon span {
+  display: block;
+  height: 2px;
+  background: currentColor;
+  border-radius: 1px;
+}
+.flyout-toggle:hover {
+  color: #ccc;
+}
+
+.flyout-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100000;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.flyout-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 100001;
+  width: min(340px, 85vw);
+  padding: 70px 32px 40px;
+  overflow-y: auto;
+  background: #333;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
+  transform: translateX(-100%);
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+.flyout-open .flyout-panel {
+  transform: translateX(0);
+  visibility: visible;
+  transition: transform 0.3s ease;
+}
+
+.flyout-close {
+  position: absolute;
+  top: 16px;
+  right: 18px;
+  border: 0;
+  background: transparent;
+  color: #fff;
+  font-size: 36px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.flyout-list,
+.flyout-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flyout-list > li {
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+.flyout-list a,
+.flyout-list .flyout-group {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.flyout-list a {
+  position: relative;
+  color: #efefef;
+  transition: color 0.2s;
+}
+.flyout-list a::after {
+  content: "›";
+  margin-left: 8px;
+  font-size: 1.2em;
+  line-height: 1;
+  opacity: 0;
+  transition: opacity 0.2s, margin-left 0.2s;
+}
+.flyout-list a:hover {
+  color: #fff;
+}
+.flyout-list a:hover::after {
+  opacity: 1;
+  margin-left: 10px;
+}
+.flyout-list > li > a,
+.flyout-list > li > .flyout-group {
+  font-size: 14px;
+}
+.flyout-list .flyout-group {
+  color: #999;
+}
+.flyout-list ul {
+  margin-top: 10px;
+}
+.flyout-list ul a {
+  padding: 7px 0 7px 14px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+.flyout-list .current-menu-item > a {
+  color: #fff;
+}
+.flyout-list .current-menu-item > a::after {
+  opacity: 1;
+  margin-left: 10px;
+}
+
+.et_pb_image.home-card {
+  margin-bottom: 18px !important;
+}
+.et_pb_image.home-card .et_pb_image_wrap,
+.et_pb_image.home-card img {
+  display: block;
+  width: 100%;
+}
+.et_pb_image.home-card img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+.et_pb_image.home-card a:hover img {
+  opacity: 0.85;
+}
+
+.et_pb_text.home-stat {
+  text-align: center;
+}
+.et_pb_text.home-stat .home-stat__num {
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.1;
+  padding-bottom: 6px;
+}
+.et_pb_text.home-stat .home-stat__label {
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.home-quote blockquote {
+  margin: 10px 0 0;
+  padding: 0 0 0 24px;
+  border-left: 3px solid #888;
+  font-size: 20px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.home-quote cite {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  font-style: normal;
+  opacity: 0.75;
+}
+
+.et_pb_row.home-cards > .et_pb_column {
+  display: flex;
+  flex-direction: column;
+}
+.et_pb_row.home-cards > .et_pb_column > .et_pb_button_module_wrapper {
+  margin-top: auto;
 }
 
 /*# sourceMappingURL=main.css.map */
