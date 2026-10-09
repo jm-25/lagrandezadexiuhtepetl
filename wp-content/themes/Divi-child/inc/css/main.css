@@ -857,6 +857,7 @@ img.mfp-img {
   aspect-ratio: 4/3;
   object-fit: cover;
   transition: opacity 0.2s;
+  border: 1px solid #888888;
 }
 .et_pb_image.home-card a:hover img {
   opacity: 0.85;
@@ -902,4 +903,14 @@ img.mfp-img {
   margin-top: auto;
 }
 
-/*# sourceMappingURL=main.css.map */
+.et_pb_section.home-sep::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 2;
+  width: 80vw;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateX(-50%);
+}
